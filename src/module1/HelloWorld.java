@@ -5,8 +5,10 @@ import de.fhpotsdam.unfolding.UnfoldingMap;
 import de.fhpotsdam.unfolding.geo.Location;
 import de.fhpotsdam.unfolding.providers.AbstractMapProvider;
 import de.fhpotsdam.unfolding.providers.Google;
+import de.fhpotsdam.unfolding.providers.Microsoft;
 import de.fhpotsdam.unfolding.providers.MBTilesMapProvider;
 import de.fhpotsdam.unfolding.providers.Microsoft;
+import de.fhpotsdam.unfolding.utils.MapUtils;
 import de.fhpotsdam.unfolding.utils.MapUtils;
 
 /** module1.HelloWorld
@@ -48,10 +50,15 @@ public class HelloWorld extends PApplet
 		this.background(200, 200, 200);
 		
 		// Select a map provider
+<<<<<<< HEAD
 		//AbstractMapProvider provider = new Google.GoogleTerrainProvider();
 		AbstractMapProvider provider = new Microsoft.HybridProvider(); 
+=======
+		//AbstractMapProvider provider = new Google.GoogleMapProvider();
+		AbstractMapProvider provider = new Microsoft.RoadProvider();
+>>>>>>> 2dbb5922d33bf62c756a4f398eaa04c4c2bf7a0d
 		// Set a zoom level
-		int zoomLevel = 10;
+		int zoomLevel = 12;
 		
 		if (offline) {
 			// If you are working offline, you need to use this provider 
