@@ -50,13 +50,8 @@ public class HelloWorld extends PApplet
 		this.background(200, 200, 200);
 		
 		// Select a map provider
-<<<<<<< HEAD
-		//AbstractMapProvider provider = new Google.GoogleTerrainProvider();
-		AbstractMapProvider provider = new Microsoft.HybridProvider(); 
-=======
 		//AbstractMapProvider provider = new Google.GoogleMapProvider();
 		AbstractMapProvider provider = new Microsoft.RoadProvider();
->>>>>>> 2dbb5922d33bf62c756a4f398eaa04c4c2bf7a0d
 		// Set a zoom level
 		int zoomLevel = 12;
 		
