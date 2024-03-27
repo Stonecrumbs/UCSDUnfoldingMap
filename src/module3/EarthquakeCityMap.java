@@ -30,7 +30,7 @@ import parsing.ParseFeed;
 public class EarthquakeCityMap extends PApplet {
 
 	// You can ignore this.  It's to keep eclipse from generating a warning.
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 
 	// IF YOU ARE WORKING OFFLINE, change the value of this variable to true
 	private static final boolean offline = false;
@@ -136,4 +136,9 @@ public class EarthquakeCityMap extends PApplet {
 		// Remember you can use Processing's graphics methods here
 	
 	}
+
+	public static void main(String[] args) {
+		PApplet.main("EarthquakeCityMap");
+	}
+
 }
