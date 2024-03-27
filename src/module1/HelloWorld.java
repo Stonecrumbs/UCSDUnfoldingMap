@@ -6,6 +6,7 @@ import de.fhpotsdam.unfolding.geo.Location;
 import de.fhpotsdam.unfolding.providers.AbstractMapProvider;
 import de.fhpotsdam.unfolding.providers.Google;
 import de.fhpotsdam.unfolding.providers.MBTilesMapProvider;
+import de.fhpotsdam.unfolding.providers.Microsoft;
 import de.fhpotsdam.unfolding.utils.MapUtils;
 
 /** module1.HelloWorld
@@ -47,13 +48,14 @@ public class HelloWorld extends PApplet
 		this.background(200, 200, 200);
 		
 		// Select a map provider
-		AbstractMapProvider provider = new Google.GoogleTerrainProvider();
+		//AbstractMapProvider provider = new Google.GoogleTerrainProvider();
+		AbstractMapProvider provider = new Microsoft.HybridProvider(); 
 		// Set a zoom level
 		int zoomLevel = 10;
 		
 		if (offline) {
 			// If you are working offline, you need to use this provider 
-			// to work with the maps that are local on your computer.  
+			// to work with the maps that are local on your computer.
 			provider = new MBTilesMapProvider(mbTilesString);
 			// 3 is the maximum zoom level for working offline
 			zoomLevel = 3;
@@ -72,7 +74,7 @@ public class HelloWorld extends PApplet
 		// The next line zooms in and centers the map at 
 	    // 32.9 (latitude) and -117.2 (longitude)
 		map1.zoomAndPanTo(zoomLevel, new Location(32.9f, -117.2f));
-		map2.zoomAndPanTo(zoomLevel, new Location(38.756, -9.115)); // ISEL
+		map2.zoomAndPanTo(zoomLevel, new Location(-22.9, -43.2)); // ISEL
 		
 		// This line makes the map interactive
 		MapUtils.createDefaultEventDispatcher(this, map1);

@@ -15,12 +15,12 @@ public class HelloUCSDWorld extends PApplet {
 
 
 	public void setup() {
-		size(1600, 1200, JAVA2D);
+		size(800, 600, JAVA2D);
 
 		map = new UnfoldingMap(this, new Google.GoogleTerrainProvider());
 		map2 = new UnfoldingMap(this, new Google.GoogleTerrainProvider());
 		map.zoomAndPanTo(14, new Location(32.881, -117.238)); // UCSD
-		map2.zoomAndPanTo(20, new Location(38.756, -9.115)); // UCSD
+		map2.zoomAndPanTo(20, new Location(38.756, -9.115)); // ISEL
 
 		MapUtils.createDefaultEventDispatcher(this, map);
 		MapUtils.createDefaultEventDispatcher(this, map2);
